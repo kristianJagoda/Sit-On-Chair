@@ -1,0 +1,161 @@
+.section5 {
+    background: #fff;
+}
+/*-------CONTACT---------*/
+.contact {
+    p {
+        font-size: 3em;
+        font-weight: bold;
+        padding-bottom: 5px;
+        padding-top: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 20%;
+            border: 3.5px solid lighten($color-primary-4, 10%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+/*----------FORM --------------*/
+.section5 {
+    input,
+    textarea {
+        display: block;
+    }
+
+    .hidden {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+.section5 {
+    height: 430px;
+
+    .form-left,
+    .form-right {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .form-right {
+        width: 39%;
+        position: relative;
+
+        img {
+            margin-left: 25%;
+        }
+    }
+
+    .form-left {
+        width: 60%;
+    }
+}
+
+.checkbox {
+    input[type="checkbox"] {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: $color-primary-4;
+        margin-left: 12%;
+
+        + label {
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.btn2 {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 2px #666;
+    -moz-box-shadow: 0 0 2px #666;
+    box-shadow: 0 0 2px #666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: $color-primary-4;
+    padding: 10px 50px;
+    text-decoration: none;
+    position: absolute;
+    bottom: -60px;
+    left: 50px;
+    transition: background-color 0.5s;
+}
+
+.btn2:hover {
+    background: lighten($color-primary-4, 10%);
+    text-decoration: none;
+}
+
+.section5 {
+    input[type="button"] {
+        background-color: #27c7ab;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        width: 200px;
+        padding: 10px 30px;
+        font-size: 24px;
+        display: inline-block;
+        font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+        margin-top: 20px;
+        margin-left: 80px;
+        border-radius: 8px;
+        text-decoration: none;
+        border-style: none;
+        transition: background-color 1s;
+        &:hover {
+          background-color: lighten(#27c7ab, 10%);
+        }
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        width: 97%;
+    }
+
+    input[type="email"],
+    input[type="text"] {
+        height: 50px;
+        margin-bottom: 3%;
+        font-size: 1.5rem;
+        @include placeholder {
+            font-size: 1.5rem;
+            line-height: 3;
+        }
+    }
+
+    input[type="text"] {
+        margin-top: 3%;
+    }
+
+    textarea {
+        height: 200px;
+        resize: none;
+        font-size: 1.5rem;
+        @include placeholder {
+            font-size: 1.5rem;
+            line-height: 3;
+        }
+    }
+}
+
+.section5 {
+    input,
+    textarea {
+        &:focus {
+            outline: none !important;
+            border: 1px solid lighten($color-primary-4, 10%);
+            box-shadow: 0 0 10px #719ECE;
+        }
+    }
+}
