@@ -49,20 +49,16 @@
     padding: 30px 30px 30px 0;
 }
 
-.checkbox input {
+.checkbox input[type="checkbox"] {
     display: block;
     opacity: 0;
-    height: 48px;
     position: absolute;
-    width: 48px;
     cursor: pointer;
 }
 
 .checkbox label {
-    display: block;
     padding-left: 65px;
     position: relative;
-    font-size: 28px;
     color: #cecece;
     line-height: 120%;
     padding-top: 10px;
@@ -87,9 +83,6 @@
     display: none;
 }
 
-.checkbox input:checked + label::after {
-    display: block;
-}
 
 .active {
     background: url('../images/form_ok.jpg');
