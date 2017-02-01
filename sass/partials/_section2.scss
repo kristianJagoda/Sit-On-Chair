@@ -1,0 +1,96 @@
+/* ----- SECTION 2 ---- */
+.gallery {
+    background: #fff;
+}
+
+.small_box {
+    width: 30%;
+    height: 245px;
+    margin-top: 2%;
+    margin-left: 4%;
+    display: inline-block;
+}
+
+.small_box:first-of-type {
+    background: #fff;
+    background-image: url('../images/box1_img.jpg');
+    background-repeat: no-repeat;
+    background-position: contain;
+    margin-left: 0;
+    position: relative;
+}
+
+.small_box:nth-of-type(2n) {
+    background: #fff;
+    background-image: url('../images/box2_img.jpg');
+    background-repeat: no-repeat;
+    background-position: contain;
+    position: relative;
+}
+
+.para1_section2 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    bottom: 60px;
+    padding: 10px 0;
+    right: 0;
+    left: 0;
+}
+
+.para1_section2 p {
+    font-family: $fonts-regular;
+    /*should be raleway bolder */
+    font-size: 2em;
+    font-weight: bolder;
+    color: #000;
+    line-height: 1.2em;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.para1_section2 span::after {
+    content: '';
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    border: 3.5px solid #00B88F;
+}
+/*------- THIRD BOX ------*/
+.small_box:last-of-type {
+    background: #fff;
+    vertical-align: top;
+    padding: 20px 15px 0 30px;
+    border: 1px dotted #000;
+}
+
+.small_box:last-of-type h2 {
+    font-family: $fonts-bold;
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.small_box:last-of-type h2::after {
+    content: '';
+    width: 120%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 3.5px solid #23CAA5;
+}
+
+.para2_section2 {
+    font-size: 1.6em;
+    color: #595959;
+    line-height: 1.2em;
+    margin-top: 15px;
+}
+
+.para2_section2::first-letter {
+    font-weight: bold;
+}

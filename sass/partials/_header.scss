@@ -1,0 +1,78 @@
+/* ------- BODY AND MAIN_WIDTH ---------------- */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $fonts-regular;
+    font-size: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/* ----- HEADER ------ */
+header {
+    background-color: #000100;
+    letter-spacing: 1px;
+
+    p {
+        font-family: $fonts-regular;
+        font-size: 2em;
+        color: #fff;
+        float: left;
+        padding: 10px 0;
+        font-weight: bolder;
+    }
+
+    span {
+        font-weight: bold;
+        color: $color-primary-3;
+    }
+}
+
+.main_menu {
+    float: right;
+
+    > li {
+        font-family: $fonts-regular;
+        font-size: 1.6em;
+        font-weight: bolder;
+        display: inline-block;
+        color: #fff;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+}
+
+.main_menu > li a:link,
+.main_menu > li a:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.main_menu > li a:hover {
+    color: #b3b3b3;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+}
+
+li:hover > .submenu {
+    font-size: 1em;
+    background-color: #000;
+    padding: 10px;
+    display: block;
+}
+
+.arrow-up {
+    @include arrow;
+    left: 20px;
+    top: -10px;
+    position: absolute;
+}

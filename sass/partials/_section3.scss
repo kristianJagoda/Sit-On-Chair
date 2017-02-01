@@ -1,0 +1,151 @@
+/* ----- SECTION 3 ---- */
+/*------- PRICE LIST ------*/
+.section3 {
+    background-color: lighten($section-3, 20%);
+    height: 665px;
+}
+
+.price_list {
+    p {
+        font-size: 3em;
+        font-weight: bold;
+        padding-bottom: 5px;
+        padding-top: 10px;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 20%;
+            border: 3.5px solid $color-primary-4;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+/*-------PLANS-----------*/
+.section3 {
+    .box {
+        width: 29%;
+        height: 520px;
+        border: 2px solid $section-3;
+        margin-left: 5.5%;
+        margin-top: 5%;
+        padding-top: 10px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+}
+
+.outerCircle_top {
+    width: 50px;
+    height: 50px;
+    border: 2px solid $section-3;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.innerCircle_top {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    margin-left: -10px;
+    background: darken($section-3, 10%);
+}
+
+.price-list {
+    div {
+        @include circle (150px);
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin: 40px 0;
+        font-size: 2rem;
+        color: $color-primary-4;
+    }
+
+    sup {
+        font-family: $fonts-regular;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    p {
+        margin-top: 20px;
+        font-family: $fonts-regular;
+        font-size: 3rem;
+        font-weight: bold;
+
+        &:last-child {
+            font-size: 1rem;
+        }
+    }
+}
+
+.advice,
+.goods1,
+.goods2,
+.goods3,
+.service1,
+.service2,
+.service3,
+.warranty5,
+.warranty6 {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.goods1,
+.goods3 {
+    margin-top: 8%;
+    background: lighten(#C0C0C0, 10%);
+}
+
+.service1,
+.service3 {
+    background: lighten(#C0C0C0, 15%);
+}
+
+.service2 {
+    background: lighten(#C0C0C0, 13%);
+}
+
+.goods2 {
+    margin-top: 8%;
+    background: lighten(#C0C0C0, 17%);
+}
+
+.advice,
+.warranty5 {
+    background: lighten(#C0C0C0, 15%);
+}
+
+.section3 {
+    button {
+        font-size: 1.0rem;
+        color: #fff;
+        width: 35%;
+        height: 30px;
+        position: absolute;
+        bottom: 10px;
+        left: 100px;
+        border-style: solid;
+        border-radius: 10%;
+        background-color: lighten($color-primary-4, 10%);
+        border: 1px solid white;
+    }
+}

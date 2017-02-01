@@ -1,0 +1,45 @@
+/* ------ FONT FACES -------- */
+
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../fonts/raleway-regular.woff2') format('woff2'), url('../fonts/raleway-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../fonts/raleway-bold.woff2') format('woff2'), url('../fonts/raleway-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway-thin';
+    src: url('../fonts/raleway-thin.woff2') format('woff2'), url('../fonts/raleway-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+$fonts-regular: 'raleway-regular', Arial, Helvetica, sans-serif;
+$fonts-bold: 'raleway-bold', Arial, Helvetica, sans-serif;
+
+@mixin arrow ($color: black, $size: 10px){
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: $size solid $color;
+}
+@mixin placeholder {
+
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder {@content};
+  &::-moz-placeholder {@content};
+  &:-ms-input-placeholder {@content};
+}
+@mixin circle ($size) {
+  width: $size;
+  height: $size;
+  border: 2px solid $section-3;
+  border-radius: 50%;
+}

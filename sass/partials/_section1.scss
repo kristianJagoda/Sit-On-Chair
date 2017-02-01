@@ -1,0 +1,110 @@
+.section1 {
+    background: -moz-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(187, 188, 196, 1) 95%, rgba(187, 188, 196, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(95%, rgba(187, 188, 196, 1)), color-stop(100%, rgba(187, 188, 196, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(187, 188, 196, 1) 95%, rgba(187, 188, 196, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(187, 188, 196, 1) 95%, rgba(187, 188, 196, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(187, 188, 196, 1) 95%, rgba(187, 188, 196, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(187, 188, 196, 1) 95%, rgba(187, 188, 196, 1) 100%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#FFFFFF', endColorstr='#BBBCC4', GradientType=0);
+    /* ie6-9 */
+}
+/*--------SECTION WITH CHAIR-----------*/
+.larger_box,
+.smaller_box {
+    display: inline-block;
+    width: 49%;
+}
+
+.section1Div {
+    padding-top: 20px;
+}
+
+.smaller_box {
+    height: 400px;
+    position: relative;
+}
+
+.smaller_box img {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.arrow1 {
+    position: absolute;
+    top: 150px;
+}
+
+.arrow1,
+.arrow2 {
+    font-size: 9em;
+    font-weight: lighter;
+    color: #25C8AD;
+}
+/* ---- PARAGRAPH WITH CHAIR -------*/
+.larger_box {
+    padding-top: 75px;
+    padding-right: 75px;
+    position: relative;
+    vertical-align: top;
+}
+
+.larger_box span,
+.para1_section1 {
+    font-size: 2.4rem;
+    font-weight: bolder;
+}
+
+.para1_section1 {
+    padding-left: 55px;
+    padding-bottom: 10px;
+}
+
+.larger_box span {
+    font-weight: bold;
+    color: darken($color-primary-3, 7%);
+}
+
+.para2_section1 {
+    font-size: 1.8em;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 15px;
+    line-height: 1.4em;
+}
+
+.btn {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 2px #666;
+    -moz-box-shadow: 0 0 2px #666;
+    box-shadow: 0 0 2px #666;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: $color-primary-4;
+    padding: 10px 50px;
+    text-decoration: none;
+    position: absolute;
+    bottom: -55px;
+    left: 120px;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background: lighten($color-primary-4, 10%);
+    text-decoration: none;
+}
+
+.arrow2 {
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
