@@ -61,13 +61,11 @@ body {
     display: none;
     position: absolute;
     top: 50px;
-}
-
-li:hover > .submenu {
     font-size: 1em;
     background-color: #000;
     padding: 10px;
     display: block;
+    visibility: hidden;
 }
 
 .arrow-up {

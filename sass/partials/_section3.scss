@@ -40,6 +40,53 @@
         &:first-of-type {
             margin-left: 0;
         }
+
+        &:hover {
+            background-color: lighten($color-primary-3, 10%);
+            border: none;
+        }
+
+        &:hover .outerCircle_top {
+            background-color: lighten($color-primary-3, 10%);
+            border: none;
+        }
+
+        &:hover .innerCircle_top {
+            background-color: #fff;
+        }
+
+        &:hover .price-list h2 {
+            color: #fff;
+        }
+
+        &:hover .circle {
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        &:hover .goods1 {
+            background: lighten(#e6e6e6, 5%);
+        }
+
+        &:hover .service1 {
+            background: darken(#e1e1e1, 10%);
+        }
+
+        &:hover .goods2 {
+            background: darken(#ebebeb, 15%);
+        }
+
+        &:hover .warranty5 {
+            background: darken(#e6e6e6, 15%);
+        }
+
+        &:hover .goods3 {
+            background: darken(#dadada, 15%);
+        }
+
+        &:hover .warranty6 {
+            background: darken(#cdcdcd, 5%);
+        }
     }
 }
 
@@ -107,6 +154,7 @@
     width: 100%;
     font-size: 1.2rem;
     padding: 5px;
+    background: lighten(#C0C0C0, 5%);
 }
 
 .goods1,
