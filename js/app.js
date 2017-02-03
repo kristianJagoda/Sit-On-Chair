@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var submenu = document.querySelector('.submenu'); //submenu
 
     li.addEventListener('mouseover', function(e) { //add event handler to change visibility from hidden to visible
-        setTimeout(function() {
-            submenu.style.visibility = 'visible';
-        }, 500);
+        submenu.style.visibility = 'visible';
 
 
     });
@@ -31,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         });
     }
-    for (var i = 0; i < 2; i++) {
+    for (i = 0; i < 2; i++) {
 
         smallBoxes[i].addEventListener('mouseout', function(e) {
             var div = this.children[0];
@@ -50,8 +48,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
+    //Slider
+    var slider = document.querySelector('.slider');
+
+    var arrow1 = document.querySelector('.arrow1');
+    var arrow2 = document.querySelector('.arrow2');
+
+    var lis = slider.querySelectorAll('ul>li');
+    var index = 0;
+    lis[index].classList.add('visible');
 
 
+    arrow2.addEventListener('click', function() {
+        lis[index].classList.remove('visible');
+        index++;
+        if (index > lis.length - 1) {
+            index = 0;
+        }
+        lis[index].classList.add('visible');
+    });
 
-
+    arrow1.addEventListener('click', function() {
+        lis[index].classList.remove('visible');
+        index--;
+        if (index < 0) {
+            index = lis.length - 1;
+        }
+        lis[index].classList.add('visible');
+    });
 });
