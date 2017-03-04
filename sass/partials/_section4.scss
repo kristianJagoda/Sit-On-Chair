@@ -65,12 +65,15 @@
     opacity: 0;
     position: absolute;
     cursor: pointer;
+    top: 40px;
+    left: 16px;
 }
 
 .checkbox label {
+    font-size: 1.6rem;
     padding-left: 65px;
     position: relative;
-    color: #cecece;
+    color: #000;
     line-height: 120%;
     padding-top: 10px;
     cursor: pointer;
@@ -96,6 +99,7 @@
 
 .active {
     background: url('../images/form_ok.jpg');
+    background-repeat: no-repeat;
     width: 48px;
     height: 40px;
 }

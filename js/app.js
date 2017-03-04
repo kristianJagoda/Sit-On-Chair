@@ -86,9 +86,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     })();
 
-
-    // Drop down menus - selecting elements of a chair
     (function() {
+        // Setting transportation costs first (if client wishes)
+
+        var transport = document.querySelector('#transport');
+        var transportPrice = transport.dataset.transportPrice;
+        var transportBox = document.querySelector('.panel_left .transport');
+        var transportPriceBox = document.querySelector('.panel_right .transport');
+
+        transport.addEventListener('change', function(e) {
+            var label = this.parentElement.firstElementChild;
+
+            if (transport.checked) {
+                label.setAttribute('class', 'active');
+                transportBox.innerText = 'Delivery';
+                transportPriceBox.innerText = '£' + transportPrice;
+            } else {
+                label.removeAttribute('class', 'active');
+                transportBox.innerText = '';
+                transportPriceBox.innerText = ''; 
+            }
+
+        });
+
+
+        // Drop down menus - selecting elements of a chair and calculating the price
 
         var arrows = document.querySelectorAll('.list_arrow');
 
@@ -111,51 +133,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
                         var text = this.innerText; //get innerText from li and assign it to a variable text
+                        var title = document.querySelector('.panel_left .title');
+                        var titlePrice = document.querySelector('.panel_right .title');
+                        var color = document.querySelector('.panel_left .color');
+                        var colorPrice = document.querySelector('.panel_right .color');
+                        var pattern = document.querySelector('.panel_left .pattern');
+                        var patternPrice = document.querySelector('.panel_right .pattern');
+
 
                         //if one of the conditions below is met -> show text in the calculator area for the user
 
                         if (text == 'Margharita' || text == 'Clair' || text == 'Selena') {
-
-                            var title = document.querySelector('.panel_left .title');
                             title.innerText = text;
 
                             if (text == 'Margharita') {
-                                var titlePrice = document.querySelector('.panel_right .title');
                                 titlePrice.innerText = '£200';
+
                             } else if (text == 'Clair') {
-                                var titlePrice = document.querySelector('.panel_right .title');
                                 titlePrice.innerText = '£150';
+
                             } else if (text == 'Selena') {
-                                var titlePrice = document.querySelector('.panel_right .title');
                                 titlePrice.innerText = '£100';
                             }
 
                         } else if (text == 'Red' || text == 'Black' || text == 'Orange') {
-
-                            var color = document.querySelector('.panel_left .color')
                             color.innerText = text;
-                            var colorPrice = document.querySelector('.panel_right .color');
                             colorPrice.innerText = '£0';
 
                         } else if (text == 'Fabric' || text == 'Leather') {
-
-                            var pattern = document.querySelector('.panel_left .pattern')
                             pattern.innerText = text;
 
                             if (text == 'Fabric') {
-
-                                var patternPrice = document.querySelector('.panel_right .pattern');
                                 patternPrice.innerText = '£0';
 
                             } else if (text == 'Leather') {
-
-                                var patternPrice = document.querySelector('.panel_right .pattern');
                                 patternPrice.innerText = '£50';
                             }
                         }
 
-                        var patternELO = document.querySelector('.panel_right .pattern');
-                        console.log(patternELO.innerText);
+
+
+
 
                     });
                 }
@@ -165,15 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }
 
-
-
     })();
-
-
-
-
-
-
 
 
 
