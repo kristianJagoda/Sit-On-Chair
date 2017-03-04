@@ -93,20 +93,70 @@ document.addEventListener('DOMContentLoaded', function() {
         var arrows = document.querySelectorAll('.list_arrow');
 
         for (var i = 0; i < arrows.length; i++) {
-            arrows[i].addEventListener('click', function(e) {
+            arrows[i].addEventListener('click', function(e) { //add event click on every arrow
 
                 var ul = this.nextElementSibling;
                 var listEls = ul.querySelectorAll('li');
 
                 ul.style.display = 'block';
 
+
                 for (var i = 0; i < listEls.length; i++) {
 
-                    listEls[i].addEventListener('click', function(e) {
+                    listEls[i].addEventListener('click', function(e) { //add event click on li-s
                         var span = this.parentElement.parentElement.firstElementChild;
                         span.innerText = this.innerText;
                         span.style.color = '#000';
                         this.parentElement.style.display = 'none';
+
+
+                        var text = this.innerText; //get innerText from li and assign it to a variable text
+
+                        //if one of the conditions below is met -> show text in the calculator area for the user
+
+                        if (text == 'Margharita' || text == 'Clair' || text == 'Selena') {
+
+                            var title = document.querySelector('.panel_left .title');
+                            title.innerText = text;
+
+                            if (text == 'Margharita') {
+                                var titlePrice = document.querySelector('.panel_right .title');
+                                titlePrice.innerText = '£200';
+                            } else if (text == 'Clair') {
+                                var titlePrice = document.querySelector('.panel_right .title');
+                                titlePrice.innerText = '£150';
+                            } else if (text == 'Selena') {
+                                var titlePrice = document.querySelector('.panel_right .title');
+                                titlePrice.innerText = '£100';
+                            }
+
+                        } else if (text == 'Red' || text == 'Black' || text == 'Orange') {
+
+                            var color = document.querySelector('.panel_left .color')
+                            color.innerText = text;
+                            var colorPrice = document.querySelector('.panel_right .color');
+                            colorPrice.innerText = '£0';
+
+                        } else if (text == 'Fabric' || text == 'Leather') {
+
+                            var pattern = document.querySelector('.panel_left .pattern')
+                            pattern.innerText = text;
+
+                            if (text == 'Fabric') {
+
+                                var patternPrice = document.querySelector('.panel_right .pattern');
+                                patternPrice.innerText = '£0';
+
+                            } else if (text == 'Leather') {
+
+                                var patternPrice = document.querySelector('.panel_right .pattern');
+                                patternPrice.innerText = '£50';
+                            }
+                        }
+
+                        var patternELO = document.querySelector('.panel_right .pattern');
+                        console.log(patternELO.innerText);
+
                     });
                 }
 
