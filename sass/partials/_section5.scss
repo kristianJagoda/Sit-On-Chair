@@ -56,21 +56,6 @@
     }
 }
 
-.checkbox {
-    input[type="checkbox"] {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background: $color-primary-4;
-        margin-left: 12%;
-
-        + label {
-            display: inline-block;
-            font-size: 1.2rem;
-        }
-    }
-}
-
 .btn2 {
     -webkit-border-radius: 10;
     -moz-border-radius: 10;
