@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 var ul = this.nextElementSibling;
                 var listEls = ul.querySelectorAll('li');
 
-
                 ul.style.display = 'block';
 
                 for (var i = 0; i < listEls.length; i++) {
@@ -106,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     listEls[i].addEventListener('click', function(e) {
                         var span = this.parentElement.parentElement.firstElementChild;
                         span.innerText = this.innerText;
+                        span.style.color = '#000';
                         this.parentElement.style.display = 'none';
                     });
                 }

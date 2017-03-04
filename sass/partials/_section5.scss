@@ -4,10 +4,10 @@
 /*-------CONTACT---------*/
 .contact {
     p {
-        font-size: 3em;
+        font-size: 2.6em;
         font-weight: bold;
-        padding-bottom: 5px;
-        padding-top: 10px;
+        padding-top: 30px;
+        padding-bottom: 15px;
         position: relative;
 
         &::after {
@@ -112,8 +112,9 @@
         text-decoration: none;
         border-style: none;
         transition: background-color 1s;
+
         &:hover {
-          background-color: lighten(#27c7ab, 10%);
+            background-color: lighten(#27c7ab, 10%);
         }
     }
 

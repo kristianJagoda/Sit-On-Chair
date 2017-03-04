@@ -1,10 +1,13 @@
 .application {
     background-color: #f9f9f9;
-    padding: 30px 0;
+    padding-bottom: 30px;
 
     h3 {
-        color: #575757;
-        font-size: 18px;
+        font-size: 2.6em;
+        font-weight: bold;
+        padding-bottom: 5px;
+        padding-top: 30px;
+        position: relative;
     }
 }
 
@@ -83,7 +86,6 @@
     display: none;
 }
 
-
 .active {
     background: url('../images/form_ok.jpg');
     width: 48px;
@@ -137,8 +139,9 @@
         border-radius: 8px;
         text-decoration: none;
         transition: background-color 1s;
+
         &:hover {
-          background-color: lighten(#27c7ab, 10%);
+            background-color: lighten(#27c7ab, 10%);
         }
     }
 }
@@ -204,7 +207,7 @@
     color: #24baa0;
 }
 
-.list_arrow{
+.list_arrow {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
@@ -217,10 +220,11 @@
     cursor: pointer;
 }
 
-.list_panel{
+.list_panel {
+    font-size: 1rem;
     background-color: white;
     border: 1px solid #ccc;
-    width: 288px;
+    width: 277px;
     padding-left: 15px;
     padding-bottom: 10px;
     list-style: none;
