@@ -17,6 +17,6 @@ Please check my first website prepared on bootcamp at [Coders' Lab.](https://git
 * Hoverable elements
 * Calculator
 
-Sit on chair is a simple website project based on a PSD file.
+Sit on chair is a simple website project based on the PSD file.
 
 Preview -> [Sit-On-Chair.](https://kristianjagoda.github.io/Sit-On-Chair/)
