@@ -1,21 +1,21 @@
-Sit-On-Chair
+#Sit-On-Chair
 
-Please look at my first website prepared on bootcamp in [Coders' Lab.](https://github.com/CodersLab)
-Sit-on-Chair
+Please check my first website prepared on bootcamp at [Coders' Lab.](https://github.com/CodersLab)
 
-smaller PSD project presenting basic page functionality
 
-Coded using:
+##Code used:
 
-HTML5
-CSS
-JavaScript
-Features:
+*HTML5
+*CSS
+*VanillaJS
 
-Dropdown menus
-Simple image slider
-Hoverable elements
-Calculator
+
+##Features:
+
+*Dropdown menus
+*Simple image slider
+*Hoverable elements
+*Calculator
 
 Sit on chair is a simple website project based on a PSD file.
 
