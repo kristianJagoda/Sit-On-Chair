@@ -207,7 +207,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     })();
 
+    // Event click on submit button in section5
+    (function() {
+        var btn = document.querySelector('.form-left-btn');
+        console.log(btn);
+        btn.addEventListener('change', function(e) {
+            e.stopImmediatePropagation();
+            var label = this.parentElement.firstElementChild;
 
+            if (btn.checked) {
+                label.setAttribute('class', 'active');
+
+            } else {
+                label.removeAttribute('class', 'active');
+
+            }
+
+        });
+
+
+
+    })();
 
 
 
