@@ -93,19 +93,23 @@ document.addEventListener('DOMContentLoaded', function() {
         var transportPrice = transport.dataset.transportPrice;
         var transportBox = document.querySelector('.panel_left .transport');
         var transportPriceBox = document.querySelector('.panel_right .transport');
+        var rightPanel = document.querySelector('.panel_right');
+        var sumPriceBox = document.querySelector('.sum');
 
         transport.addEventListener('change', function(e) {
+            e.stopImmediatePropagation();
             var label = this.parentElement.firstElementChild;
 
             if (transport.checked) {
                 label.setAttribute('class', 'active');
                 transportBox.innerText = 'Delivery';
-                transportPriceBox.innerText = '£' + transportPrice;
+                transportPriceBox.innerText = transportPrice;
             } else {
                 label.removeAttribute('class', 'active');
                 transportBox.innerText = '';
-                transportPriceBox.innerText = ''; 
+                transportPriceBox.innerText = '';
             }
+            calculatePrice();
 
         });
 
@@ -116,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (var i = 0; i < arrows.length; i++) {
             arrows[i].addEventListener('click', function(e) { //add event click on every arrow
-
+                e.stopImmediatePropagation();
                 var ul = this.nextElementSibling;
                 var listEls = ul.querySelectorAll('li');
 
@@ -126,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (var i = 0; i < listEls.length; i++) {
 
                     listEls[i].addEventListener('click', function(e) { //add event click on li-s
+                        e.stopImmediatePropagation();
+
+
                         var span = this.parentElement.parentElement.firstElementChild;
                         span.innerText = this.innerText;
                         span.style.color = '#000';
@@ -134,11 +141,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         var text = this.innerText; //get innerText from li and assign it to a variable text
                         var title = document.querySelector('.panel_left .title');
-                        var titlePrice = document.querySelector('.panel_right .title');
+                        var titlePriceBox = document.querySelector('.panel_right .title');
                         var color = document.querySelector('.panel_left .color');
-                        var colorPrice = document.querySelector('.panel_right .color');
+                        var colorPriceBox = document.querySelector('.panel_right .color');
                         var pattern = document.querySelector('.panel_left .pattern');
-                        var patternPrice = document.querySelector('.panel_right .pattern');
+                        var patternPriceBox = document.querySelector('.panel_right .pattern');
 
 
                         //if one of the conditions below is met -> show text in the calculator area for the user
@@ -147,33 +154,35 @@ document.addEventListener('DOMContentLoaded', function() {
                             title.innerText = text;
 
                             if (text == 'Margharita') {
-                                titlePrice.innerText = '£200';
+                                titlePriceBox.innerText = '400';
+                                calculatePrice();
 
                             } else if (text == 'Clair') {
-                                titlePrice.innerText = '£150';
+                                titlePriceBox.innerText = '300';
+                                calculatePrice();
 
                             } else if (text == 'Selena') {
-                                titlePrice.innerText = '£100';
+                                titlePriceBox.innerText = '200';
+                                calculatePrice();
                             }
 
                         } else if (text == 'Red' || text == 'Black' || text == 'Orange') {
                             color.innerText = text;
-                            colorPrice.innerText = '£0';
+                            colorPriceBox.innerText = '0';
+                            calculatePrice();
 
                         } else if (text == 'Fabric' || text == 'Leather') {
                             pattern.innerText = text;
 
                             if (text == 'Fabric') {
-                                patternPrice.innerText = '£0';
+                                patternPriceBox.innerText = '0';
+                                calculatePrice();
 
                             } else if (text == 'Leather') {
-                                patternPrice.innerText = '£50';
+                                patternPriceBox.innerText = '50';
+                                calculatePrice();
                             }
                         }
-
-
-
-
 
                     });
                 }
@@ -183,7 +192,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }
 
+        function calculatePrice() {
+            var sum = 0;
+            for (var i = 0; i < rightPanel.children.length; i++) {
+                if (rightPanel.children[i].innerText !== '') {
+                    sum += parseInt(rightPanel.children[i].innerText);
+                } else {
+                    sum += 0;
+                }
+            }
+            sumPriceBox.innerText = '£' + sum;
+        }
+
+
     })();
+
+
 
 
 
