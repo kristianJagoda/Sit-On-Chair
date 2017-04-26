@@ -6,15 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
         var li = document.querySelector('.main_menu').children[0]; //li : about us
         var submenu = document.querySelector('.submenu'); //submenu
 
-        li.addEventListener('mouseover', function(e) { //add event handler to change visibility from hidden to visible
-            submenu.style.visibility = 'visible';
-
+        li.addEventListener('click', function(e) { //add event handler to change visibility from hidden to visible
+            if (submenu.style.display = 'none') {
+                submenu.style.display = 'block';
+            } else if (submenu.style.display = 'block'){
+                submenu.style.display = 'none';
+            }
 
         });
-        li.addEventListener('mouseout', function(e) { //add event handler to change visibility from visible to hidden
-            submenu.style.visibility = 'hidden';
 
-        });
+
     })();
 
 

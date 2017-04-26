@@ -42,11 +42,11 @@
         }
 
         &:hover {
-            background-color: lighten($color-primary-3, 10%);
+            background-color: lighten($color-primary-3, 5%);
         }
 
         &:hover .outerCircle_top {
-            background-color: lighten($color-primary-3, 10%);
+            background-color: lighten($color-primary-3, 5%);
             border: none;
         }
 
