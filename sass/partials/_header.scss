@@ -34,8 +34,10 @@ body {
 
 .main_menu {
     float: right;
+    height: 43px;
 
     > li {
+        height: 100%;
         font-family: $fonts-regular;
         font-size: 1.6em;
         font-weight: bolder;
@@ -65,7 +67,7 @@ body {
     background-color: #000;
     padding: 10px;
     display: block;
-    visibility: hidden;
+    display: none;
 }
 
 .arrow-up {
