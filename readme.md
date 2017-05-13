@@ -1,16 +1,16 @@
-#Sit-On-Chair
+# Sit-On-Chair #
 
 Please check my first website prepared on bootcamp at [Coders' Lab.](https://github.com/CodersLab)
 
 
-##Code used:
+## Code used: ##
 
 * HTML5
 * CSS
 * VanillaJS
 
 
-##Features:
+## Features: ##
 
 * Dropdown menus
 * Simple image slider
